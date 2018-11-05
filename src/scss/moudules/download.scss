@@ -1,0 +1,13 @@
+
+//下载Excel按钮
+.download-excel-btn{
+  &.r0{
+      right: 0;
+  }
+}
+
+.download-data-btn{
+  position:absolute;
+  right:-5px; 
+   z-index:99;
+}

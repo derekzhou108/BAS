@@ -1,0 +1,42 @@
+.top-wrapper {
+    height: 50px;
+    background: #2e6fac;
+    min-width: 1280px;
+    position: relative;
+    z-index: 103;
+    .logo {
+        height: 50px;
+        line-height:50px;
+        display: inline-block;
+        padding: 5px 5px 5px 20px;
+        img {
+            display: block;
+        }
+    }
+
+    .menu{
+        float: right;
+        font-size: 0;
+        .item{
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+            padding:0 20px 0 40px;
+            .icon{
+                position: absolute;
+                left: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:hover{
+                background: rgba(255,255,255,.15)
+            }
+        }
+
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('include/head.html')
+</head>
+
+<body>
+    @@include('include/top.html')
+
+    <div class="layui-heade  layui-form header-wrapper">
+        <ul class="layui-nav" lay-filter="swich-game" style="position: relative;">
+            <li class="layui-nav-item">
+                <a href="/site/index">
+                    <i class="icon icon-home"></i>
+                </a>
+            </li>
+            <li class="layui-nav-item select-pro-list" id="selectProListWrap">
+                <script type="text/html" id="tplSelectProList">
+                    <a>全部项目</a>
+                    <dl class="layui-nav-child">
+                        {{each $data list index}}
+                        <dd>
+                            <a class="item" {{if list.app_list}} href="/sub/dist/home.html" {{/if}} data-pid={{list.project_id}} data-name={{list.project_name}} data-info={{list.app_list}}>
+                                <span class="pro-icon">
+                                    <img src="{{list.icon}}">
+                                </span>
+                                <span class="pro-name">{{list.project_name}}</span>
+                            </a>
+                        </dd>
+                        {{/each}}
+                    </dl>
+                </script>
+            </li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div class="wrap">
+
+            <!-- 项目列表 -->
+            <div class="table-wrap project-table u-hide" id="projectListWrap">
+                <script type="text/html" id="tplProjectList">
+                    <div class="list-title">
+                        <span class="icon-mark"></span>
+                        <span>网络游戏</span>
+                    </div>
+                    <div class="list">
+                        {{each $data list index}}
+                        <a class="item" href="javascript:;" data-name={{list.project_name}} data-pid={{list.project_id}} data-info='{{list.app_list}}'>
+                            <span class="project_img">
+                                <img src="{{list.icon}}">
+                            </span>
+                            <span class="project_name">{{list.project_name}}</span>
+                        </a>
+                        {{/each}}
+                    </div>
+                </script>
+            </div>
+
+        </div>
+    </div>
+    @@include('include/footer.html')
+</body>
+<script src="/sub/dist/js/pages/index.js"></script>
+
+</html>

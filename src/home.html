@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('include/head.html')
+</head>
+
+<body>
+    @@include('include/top.html')
+    <div class="layui-heade  layui-form header-wrapper">
+        <ul class="layui-nav" lay-filter="swich-game">
+            <li class="layui-nav-item">
+                <a href="/site/index">
+                    <i class="icon icon-home"></i>
+                </a>
+            </li>
+            <!-- 选择项目 -->
+            <li class="layui-nav-item select-pro-list" id="selectProjectWrap">
+                <script type="text/html" id="tplSelectProList">
+                    <a class='current-project'>全部项目</a>
+                    <dl class="layui-nav-child">
+                        {{each $data list index}}
+                        <dd>
+                            <a class="item" href="javascript:;" data-name={{list.project_name}} data-pid={{list.project_id}} data-info={{list.app_list}}>
+                                <span class="pro-icon">
+                                    <img src="{{list.icon}}">
+                                </span>
+                                <span class="pro-name">{{list.project_name}}</span>
+                            </a>
+                        </dd>
+                        {{/each}}
+                    </dl>
+                </script>
+            </li>
+
+            <!-- 选择游戏 -->
+            <li class="layui-nav-item request-filter" id="selectGame" data-type="appList">
+                <select name="appList" xm-select="appList" xm-select-type="2" xm-select-placeholder="请选择">
+                </select>
+            </li>
+
+            <!-- 顶部导航 -->
+            <li class="layui-inline layui-breadcrumb" lay-separator="-" style="visibility: visible;" id="breadcrumbWrap">
+                <script type="text/html" id="breadcrumb">
+                    {{each path item index}}
+                    <a  javascript:void(0)>{{item}}</a>{{if index < path.length-1}}<span lay-separator="">-</span>{{/if}}
+                    {{/each}}
+                </script>
+            </li>
+            <li class="configure-warp layui-inline u-fr" id="configure-system">
+                <script type="text/html" id="configureSystem">
+                    {{each items data index}}
+                            {{if data.label === '字典配置'}}
+                                <a  id = "dictionary">
+                                    {{data.label}}
+                                </a>{{else}}
+                                <a href = "{{data.url}}" target="_blank">
+                                        {{data.label}}
+                                 </a>
+                            {{/if}}
+                       
+                    {{/each}}    
+                </script>
+            </li>
+        </ul>
+    </div>
+    <div id="container">
+        <!-- 左侧栏 -->
+        <div class="layui-side side-nav" id="sideBarWrap">
+            <script type="text/html" id="tmpFillSildeNav">
+                <div class="layui-form" lay-filter="search-box">
+                        <select name="search"  lay-search lay-filter="search-input">
+                            <option value="" disabled selected>关键字搜索</option>
+                            {{each total value}} {{each value.items item}}
+                                <option  value={{item.url}}>{{item.label}}</option>
+                            {{/each}}
+                            {{/each}}
+                        </select>     
+                </div>
+                <h3 class="title">共性</h3>
+                <ul class="layui-nav layui-nav-tree" lay-filter="side-nav" lay-shrink='all'> 
+                    {{each generalList value rootIndex}} {{each value.module item }}
+                    <li class="layui-nav-item" data-title="{{item.moduleTitle}}"  >
+                        <a>{{item.moduleTitle}}</a> {{if item.subModule.length > 0}}
+                        <dl class="layui-nav-child">
+                            {{each item.subModule v subIndex}}
+                            <dd  data-path="共性|{{item.moduleTitle}}|{{v.subModuleName}}" class="sub-item {{v.dataTitle}}">
+
+                                <a title="{{v.subModuleName}}" href="#{{v.dataTitle}}">{{v.subModuleName}}</a>
+
+                            </dd>
+                            {{/each}}
+                        </dl>
+                        {{/if}}
+                    </li>
+                    {{/each}}
+                    <li class="menu-divider"></li>
+                    {{/each}}
+                </ul>
+                <h3 class="title">特性</h3>
+                <ul class="layui-nav layui-nav-tree" lay-filter="side-nav" lay-shrink='all'>
+                    {{each specialList value index}} {{each value.module item}}
+                    <li class="layui-nav-item {{item.moduleTitle==='产出'?'border-decorate':''}}">
+                        <a>{{item.moduleTitle}}</a> {{if item.subModule.length > 0}}
+                        <dl class="layui-nav-child">
+                            {{each item.subModule v subIndex}}
+                            <dd data-title="{{v.dataTitle}}" data-path="特性|{{item.moduleTitle}}|{{v.subModuleName}}"  class="sub-item {{v.dataTitle}}">
+                                <a title="{{v.subModuleName}}"  href="#{{v.dataTitle}}">{{v.subModuleName}}</a> 
+                            </dd>
+                            {{/each}}
+                        </dl>
+                        {{/if}}
+                    </li>
+                    {{/each}}
+                    <li class="menu-divider"></li>
+                    {{/each}}
+                </ul>
+            </script>
+        </div>
+
+        <!-- 主要内容 -->
+        <div class="main-content-warp layui-body layui-form side-right" id="containerContent"></div>
+
+        <!-- 根据日期选择绘制图 -->
+        <script type="text/html" id="tplRenderDate">
+            <div class="layui-input-block">
+                <select name="render_date">
+                    {{each $data item index}}
+                    <option value="{{item}}" {{if index ===0}} selected {{/if}}>{{item}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </script>
+
+
+    </div>
+    <script type="text/html" id="bodyBar">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+    <script type="text/html" id="headBar">
+        <!-- <div class="layui-inline" lay-event="add"><i class="layui-icon layui-icon-add-1"  title='增加'></i></div> -->
+        <div class="layui-inline u-oh" lay-event="upload" ><input id="excel-file" type = 'file' accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><i class="layui-icon layui-icon-upload-circle"  title='上传'></i></div>
+        <div class="layui-inline" lay-event="save"><i class="layui-icon layui-icon-file"  title='保存'></i><span class="layui-badge-dot" style="position: absolute;top: -4px;right: -4px;"></span></div>
+    </script>
+    <script type="text/html" id="dialogDictionary">
+
+        <div class="layui-tab layui-tab-card" lay-filter="dictionary">
+            <ul class="layui-tab-title">
+                {{each data item index}}
+                <li class="{{index === 0 ? 'layui-this' : ''}}" data-type={{item.key}}>{{item.val}}</li>
+                {{/each}}
+            </ul>
+            <div class="layui-tab-content no-countDesc">
+                <div class="tableSearch">
+                            搜索ID：
+                    <div class="layui-inline">
+                        <input class="layui-input" name="id" id="searchVal" autocomplete="off">
+                    </div>
+                    <button class="layui-btn" data-type="reload" id="searchBtn">搜索</button>
+                </div>
+                <!-- tabContent -->
+                {{each data item index}}
+                <div class="layui-tab-item {{index === 0 ? 'layui-show' : ''}}">
+                    <table class="data-table" id="table{{index}}" lay-filter="table{{index}}"></table>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+
+    </script> @@include('include/footer.html')
+    <script src="/sub/dist/js/pages/home.js"></script>
+</body>
+
+</html>

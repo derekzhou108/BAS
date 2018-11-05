@@ -1,0 +1,22 @@
+#footer {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    min-width: 1280px;
+    background-color: #252525;
+    padding: 20px 0;
+    color: #a9afb7;
+    height: 40px;
+    border-top: 1px solid #ccc;
+    .copyright {
+        line-height:2;
+        text-align: center;
+        font-size: 14px;
+        color: #757575;
+        font-family: Verdana, sans-serif;
+        a {
+            margin: 0 5px;
+            color: #757575
+        }
+    }
+}

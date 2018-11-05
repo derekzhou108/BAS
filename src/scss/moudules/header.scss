@@ -1,0 +1,76 @@
+.header-wrapper {
+    position: relative;
+    z-index: 1000;
+    height: 50px;
+    line-height: 50px;
+    background: #2b3846;
+    color: #ffffff;
+    .layui-nav {
+        padding: 0;
+        .layui-this:after,
+        .layui-nav-bar {
+            display: none
+        }
+        .xm-select-parent {
+            margin-top: 5px;
+        }
+        .layui-input,
+        .xm-select {
+            background: none;
+            border: none;
+            min-width: 100px;
+            margin-top: 5px;
+            width: auto;
+            .item {
+                color: inherit
+            }
+        }
+        .layui-breadcrumb{
+            margin-left: 60px;
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+    .configure-warp{
+        margin-right: 20px;
+        a{
+            color: inherit;
+            margin: 0 10px;
+        }
+    }
+    .layui-nav-item {
+        height: 50px;
+        line-height: 50px;
+        border-left: #283542 1px solid;
+        border-right: #424e5a 1px solid;
+        background: #37444f;
+        .icon {
+            vertical-align: middle;
+        }
+        .xm-select-empty {
+            color: rgba(255, 255, 255, .7);
+        }
+        
+    }
+    
+    .select-pro-list {
+        position: absolute;
+        z-index: 9999;
+        right: 0;
+        right: 100px;
+        top: -50px;
+        &.layui-nav-item {
+            background: transparent;
+            border: none;
+        }
+        .item {
+            display: block;
+            padding-top: 5px;
+            margin-bottom: 5px;
+        }
+        .pro-icon {
+            display: inline-block;
+            width: 30px;
+        }
+    }
+}

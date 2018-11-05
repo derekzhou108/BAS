@@ -1,0 +1,28 @@
+<!-- 筛选 -->
+<div class="filter-tool-wrap">
+    @@include('include/filter-wrap.html',{"dateSelect":"0,1","filterSelect":"1,2","tipName":"ltv-device"})
+</div>
+
+<!-- 图表 一 -->
+<div class="module">
+    <div class="module-title">
+        <h3>LTV有效设备</h3>
+        <a class="download-excel-btn" id="downExcel" download="excel">
+            <i class="icon icon-download"></i>
+        </a>
+    </div>
+    <div class="layui-tab layui-tab-brief fold-pannel chart-in-tab" id="tabChartTable" lay-filter="operationAll">
+        <ul class="layui-tab-title">
+            <li class="layui-this" data-type='ltv'>LTV</li>
+            <li data-type='pay'>付费</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show table-auto-width">
+                <table class="data-table" id="table1"></table>
+            </div>
+            <div class="layui-tab-item table-auto-width">
+                <table class="data-table" id="table2"></table>
+            </div>
+        </div>
+    </div>
+</div>

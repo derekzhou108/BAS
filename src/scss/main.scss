@@ -1,0 +1,19 @@
+
+// 基础类
+@import "./base/reset";//重置
+@import "./base/base";// ui类
+@import "./base/animate";// 动画
+@import "./base/icon";// icon
+@import "../lib/layui/css/layui.css";//layui
+
+// 区域组件
+@import './moudules/top'; //顶部工具栏
+@import './moudules/header';//头部
+@import './moudules/sidebar';//侧栏
+@import './moudules/container';//内容
+@import './moudules/table';//表格
+@import './moudules/footer';// 底部
+@import './moudules/download';// 下载
+@import './moudules/filter';// 筛选框
+@import "../lib/kalendae/kalendae.css";// 多选日期
+

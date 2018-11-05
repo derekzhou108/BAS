@@ -1,0 +1,48 @@
+.icon-android:before {
+        content:"";
+        display: inline-block;
+        background-image: url(../img/sprite.png);
+        background-position: 0px -55px;
+        width: 32px;
+        height: 32px;
+    }
+.icon-ios:before {
+        content:"";
+        display: inline-block;
+        background-image: url(../img/sprite.png);
+        background-position: -42px -55px;
+        width: 32px;
+        height: 32px;
+    }
+.icon-logo_zw:before {
+        content:"";
+        display: inline-block;
+        background-image: url(../img/sprite.png);
+        background-position: 0px 0px;
+        width: 106px;
+        height: 45px;
+    }
+.icon-other:before {
+        content:"";
+        display: inline-block;
+        background-image: url(../img/sprite.png);
+        background-position: -116px 0px;
+        width: 32px;
+        height: 32px;
+    }
+.icon-state:before {
+        content:"";
+        display: inline-block;
+        background-image: url(../img/sprite.png);
+        background-position: -116px -42px;
+        width: 32px;
+        height: 32px;
+    }
+.icon-windows:before {
+        content:"";
+        display: inline-block;
+        background-image: url(../img/sprite.png);
+        background-position: 0px -97px;
+        width: 32px;
+        height: 32px;
+    }

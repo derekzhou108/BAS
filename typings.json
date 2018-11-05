@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "registry:dt/express#4.0.0+20170118060322",
+    "lodash": "registry:dt/lodash#4.14.0+20170324155812"
+  }
+}

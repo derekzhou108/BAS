@@ -1,0 +1,405 @@
+// 日期选择
+.date-select-wrap {
+    float: left;
+    height: 32px;
+    margin-bottom: 10px;
+    .date-label {
+        height: 32px;
+        line-height: 32px;
+    }
+    .layui-form-label {
+        width: 100px;
+        line-height: 32px;
+        padding: 0 15px;
+    }
+    .date {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: top;
+        border: #c0c0c0 1px solid;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 10px;
+        width: 165px;
+        // overflow: hidden;
+        background-color: #dadada;
+        background-image: linear-gradient(to bottom, #fff, #dadada);
+        cursor: pointer;
+        z-index: 101;
+        &.one-day {
+            width: 120px;
+        }
+        .icon {
+            position: absolute;
+            margin: 2px 5px 2px 0;
+        }
+        .calendar {
+            display: inline-block;
+            width: 125px;
+            height: 100%
+        }
+    }
+    .layui-btn {
+        display: inline-block;
+        height: 32px;
+    }
+    #selected_date{
+        // pointer-events: none;
+        // cursor: default;
+        // opacity: 0.6;
+    }
+}
+
+// 下拉多选
+.multi-select {
+    width: 180px;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+    border: #c0c0c0 1px solid;
+    height: 32px;
+    cursor: pointer;
+    line-height: 32px;
+    padding: 0 5px;
+    background-color: #dadada;
+    background-image: linear-gradient(to bottom, #fff, #dadada);
+    .multi-list {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 35px;
+        min-width: 100%;
+        line-height: 36px;
+        padding: 5px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+        border: 1px solid #d2d2d2;
+        background-color: #fff;
+        z-index: 100;
+        color: #333;
+        border-radius: 2px;
+        white-space: nowrap;
+        width: 180px;
+        left: -1px;
+        .item {
+            &:hover {
+                background: #f2f2f2;
+            }
+            padding: 0 10px;
+            cursor: pointer;
+            .layui-icon {
+                color: #ccc;
+                border: 1px solid #ccc;
+                margin-right: 6px;
+                padding: 2px;
+                border-radius: 2px;
+                font-size: 10px;
+            }
+        }
+        .item.selected .layui-icon {
+            background-color: #5FB878;
+            color: #fff;
+            border: 1px solid #5FB878;
+        }
+    }
+}
+
+.multi-select.active {
+    .multi-list {
+        display: inline-block;
+    }
+}
+
+.multi-select-wrap {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    font-size: 0;
+    margin-bottom: 10px;
+    label {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 10px;
+    }
+    .layui-inline {
+        margin-right: 20px;
+    }
+    .xm-select-search-empty{
+        margin: 10px 0;
+        text-align: center;
+        color: #999;
+    }
+}
+
+//select小插件样式
+select[xm-select] + div {
+    dl {
+        dd.xm-select-dd-search{
+            background-color: #FFFFFF;
+            padding-bottom: 5px;
+            margin-right: 30px;
+            & > input{
+                cursor: text;
+            }
+            & > span{
+                position: absolute;
+                right: 8px;
+                top: 5px;
+            }
+        }
+        p.xm-select-search-empty{
+            margin: 10px 0;
+            text-align: center;
+            color: #999;
+        }
+    }
+}
+
+.xm-select-parent {
+    box-sizing: border-box;
+    height: 34px;
+    font-size: 14px;
+    display: inline-block;
+    .xm-select-validate,
+    .layui-select-title {
+        height: 100%;
+    }
+    .layui-edge {
+        z-index: 100;
+        top: 20px;
+    }
+}
+
+.xm-select-empty {
+    margin: 2px 0;
+    display: inline-block;
+}
+
+.xm-select {
+    position: relative;
+    background-image: linear-gradient(to bottom, #fff, #dadada);
+    border: #c0c0c0 1px solid;
+    line-height: normal;
+    display: inline-block;
+    height: auto;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 32px;
+    left: 0;
+    z-index: 99;
+    width: 165px;
+    .item {
+        padding: 0 2px;
+        border-radius: 2px;
+        color: #333;
+        display: inline-block;
+        line-height: 22px;
+        margin: 2px 2px 2px 0;
+        cursor: initial;
+        user-select: none;
+        &::after{
+            content: ","
+        }
+        &:last-child::after{
+            content: ""
+        }
+        em {
+            display: inline-block;
+            line-height: 20px;
+            height: 20px;
+        }
+        .layui-icon {
+            cursor: pointer;
+            display: none;
+        }
+    }
+}
+
+.xm-select-show {
+    min-width: 150px;
+}
+
+.layui-form-checkbox {
+    span {
+        text-align: left;
+    }
+}
+
+// echart图表绘制日期选择
+.custom-select{
+    position: absolute;
+    right: 200px;
+    top: 20px;
+    select{
+        display: block;
+    }
+}
+
+// 计算说明
+.filter-tips{
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+// 指标按钮
+.tip-btn {
+    background: #ccc;
+    padding: 0 10px;
+    color: #fff;
+    display: none;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    &.show{
+        display: inline-block
+    }
+    &:hover {
+        background: #abaaaa;
+    }
+    &::before {
+        content: "?";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -5px;
+        width: 3px;
+        height: 10px;
+        line-height: 16;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.22)
+    }
+}
+// #multi_date{
+//     position: relative;
+//     z-index: 15
+// }
+// .multi_date{
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 10;
+//     margin: 0 25px 0 10px;
+// }
+// .transparent{
+//     opacity: 0;
+// }
+//table表格
+// .layui-table-box > .layui-table-header{
+//     thead{
+//         tr:first-child{
+//             th:last-child{
+//                 .layui-table-cell{
+//                     width: auto !important
+//                 }
+//             }
+//         }
+//     }
+// }
+.layui-form-checkbox[lay-skin=primary] i{
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+
+
+.subFileter {
+    label{
+        display: inline-block;
+        float: left;
+        min-width: 80px;
+        text-align: right;
+        line-height: 40px;
+        padding-right: 10px;
+    }
+ 
+    .width{
+        width:240px;
+        float: right;
+    }
+    .layui-input-block{
+        margin-left: 90px;
+    }
+}
+.kalendae{
+    top: 100%;
+    left: 0;
+    margin: 5px 0;
+    width: 272px;
+    border: 1px solid #d2d2d2;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    font-family: inherit;
+    padding: 20px 10px 10px 10px;
+    position: absolute;
+    
+}
+#multi_date{
+    display: none
+}
+
+span.calendar, {
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+.kalendae .k-days span.k-selected.k-active{
+    background-color: #009688!important;
+    color: #fff!important;
+
+    
+}
+.kalendae .k-header{
+    padding-top: 15px
+}
+.kalendae .k-btn-previous-month, .kalendae .k-btn-next-month, .kalendae .k-btn-previous-year, .kalendae .k-btn-next-year{
+    font-weight: normal;
+    color: #999;
+}
+.kalendae .k-btn-previous-month,.kalendae .k-btn-next-month{
+    width: 40px;
+}
+.kalendae .k-days span.k-in-month.k-active{
+    color: #666;
+}
+.kalendae .k-caption{
+    font-size: 14px;
+    color: #666;
+}
+.kalendae .k-days span.k-active:hover{
+    background-color: #eaeaea;
+    color: #333;
+    border: none
+}
+.kalendae .k-days span{
+    width: 36px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+
+    border: none;
+    line-height: 20px;
+    border-radius: 0;
+    font-size: 15px;
+}
+.kalendae .k-calendar,.kalendae .k-title, .kalendae .k-header, .kalendae .k-days{
+    width: 100%
+}
+.kalendae .k-header span{
+    font-weight: 400;
+    color: #333;
+    width: 33px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 12px;
+}

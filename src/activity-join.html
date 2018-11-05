@@ -1,0 +1,31 @@
+<!-- 筛选 -->
+<div class="filter-tool-wrap">
+    @@include('include/filter-wrap.html',{"dateSelect":"0,1","filterSelect":"1,2,3","tipName":"shopping-mall"})
+</div>
+
+<!-- 图表 一 -->
+<div class="module">
+
+    <div class="module-title">
+        <h3>运营活动参与情况</h3>
+    </div>
+    <div class="layui-tab layui-tab-brief fold-pannel" id="tabChartTable" lay-filter="shopping">
+        <div class="layui-tab-content"></div>
+        <script type="text/html" id="tplTabContentShop">
+            <ul class="layui-tab-title">
+                {{each data item index}}
+                <li class="{{curTab? (curTab == item.shop_type ? 'layui-this' : '' ) : (index === 0 ? 'layui-this' : '')}}" data-type={{item.shop_type}}>{{item.shop_name}}</li>
+                {{/each}}
+            </ul>
+            <div class="layui-tab-content">
+                <!-- tabContent -->  
+                {{each data item index}}
+                <div class="layui-tab-item {{curTab? (curTab == item.shop_type ? 'layui-show' : '' ) : (index === 0 ? 'layui-show' : '')}}">
+                    <table class="data-table" id="table{{index}}"></table>
+                    <!-- <div class="custom-select" id="select{{index}}"></div> -->
+                </div>
+                {{/each}}
+            </div>
+        </script>
+    </div>
+</div>

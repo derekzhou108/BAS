@@ -1,0 +1,145 @@
+@import '../_sprite';
+@import '../base/icon';
+.table-wrap {
+    border: 1px solid #cbcbcb;
+    margin: 15px 0 0 0;
+}
+
+.table-info {
+    width: 1600px;
+}
+
+.table-total {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f8f8f8;
+    &.white {
+        background: #fff;
+        th {
+            text-align: center;
+        }
+        tr:last-child {
+            td {
+                border-bottom: none;
+            }
+        }
+        td {
+            padding: 10px 0;
+            border: 1px solid #e4e4e4;
+        }
+    }
+    th {
+        padding: 5px 10px;
+        line-height: 20px;
+        border-bottom: 1px solid #e4e4e4;
+        background: #f3f3f3;
+        background-image: linear-gradient(to bottom, #fff, #f3f3f3);
+        font-weight: bold;
+        text-align: left;
+        cursor: default;
+    }
+    td {
+        padding: 8px 0;
+        border-right: 1px solid #e4e4e4;
+        text-align: center;
+        &:first-child {
+            border-left: none;
+        }
+        &.total {
+            border-width: 1px 0;
+            background: #f7fdff;
+        }
+        b {
+            display: block;
+            font-size: 16px;
+        }
+        small {
+            color: #999;
+        }
+    }
+    .grid-gamename {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+#collectWrap {
+    min-height: 154px;
+    tbody {
+        font-weight: 600
+    }
+}
+
+#excel-file{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.isAuthor {
+    display: inline-block;
+    margin-left: 50px;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+.table-td-edit {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    overflow: hidden;
+    padding-right: 30px;
+    height: 26px;
+    border: 1px solid #ccc;
+    background: #fff;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #fff url("../img/icon-gray.png") no-repeat right -911px;
+        height: 22px;
+        width: 30px;
+    }
+}
+
+// 首页项目表格
+.project-table {
+    em[class^="icon-"] {
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+    .detail-btn {
+        @extend .icon-state;
+        text-indent: -9999px;
+    }
+    td {
+        &>span {
+            display: block;
+            &:first-child {
+                font-weight: 700;
+            }
+            &:nth-child(2) {
+                color: #999;
+                font-size: 12px;
+            }
+        }
+    }
+    .total {
+        td {
+            border-width: 1px 0 !important;
+            background: #f7fdff;
+        }
+    }
+}
+
+.table-auto-width{
+    .layui-table-cell{
+        padding: 0
+    }
+}

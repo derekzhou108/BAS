@@ -1,0 +1,21 @@
+<!-- 筛选 -->
+<div class="filter-tool-wrap">
+    @@include('include/filter-wrap.html',{"dateSelect":"0,1","filterSelect":"2,3","tipName":"user-act-track"})
+</div>
+
+<!-- 图表 一 -->
+<div class="module">
+    <div class="module-title">
+        <h3>玩家行为跟踪</h3>
+        <a class="download-excel-btn" id="downExcel" download="excel">
+            <i class="icon icon-download"></i>
+        </a>
+    </div>
+    <div class="layui-tab layui-tab-brief fold-pannel  chart-in-tab" lay-filter="operationAll">
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show table-auto-width">
+                <table class="data-table" id="table1"></table>
+            </div>
+        </div>
+    </div>
+</div>

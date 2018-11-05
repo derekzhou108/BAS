@@ -1,0 +1,184 @@
+.icon {
+  width: 26px;
+  height: 26px;
+  background: url("../img/icon-gray.png") no-repeat left top;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0;
+  text-indent: -99999px;
+}
+.menu-icon {
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon-normal.png") no-repeat left top;
+    float: left;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -99999px;
+    margin-right: 6px;
+}
+
+.menu-icon-info {
+    background-position: left 0;
+}
+
+.menu-icon-report {
+    background-position: left -38px;
+}
+
+.menu-icon-player {
+    background-position: left -76px;
+}
+
+.menu-icon-pay {
+    background-position: left -114px
+}
+
+.menu-icon-channel {
+    background-position: left -152px
+}
+
+.menu-icon-dropout {
+    background-position: left -190px
+}
+
+.menu-icon-online {
+    background-position: left -225px
+}
+
+.menu-icon-event {
+    background-position: left -263px
+}
+
+.menu-icon-system {
+    background-position: left -301px
+}
+
+.menu-icon-support {
+    background-position: left -374px
+}
+
+.menu-icon-mining {
+    background-position: left -412px
+}
+
+.menu-icon-tech {
+    background-position: left -450px
+}
+
+.menu-icon-management {
+    background-position: left -487px
+}
+
+.menu-icon-market {
+    background-position: left -520px
+}
+
+.menu-icon-pluginCenter {
+    background-position: left -555px
+}
+
+.menu-icon-version {
+    background-position: left -592px
+}
+
+.icon-home {
+  background-position: left top;
+}
+
+.icon-remove {
+  background-position: left -884px!important;
+}
+
+.icon-add {
+  background-position: left -1196px;
+}
+
+.icon-download {
+background-position: left -260px;
+}
+
+.icon-set {
+    background-position: left -988px;
+}
+
+.icon-close {
+    background-position: left -312px;
+}
+.icon-up {
+    background-position: left -208px;
+}
+.icon-down {
+    background-position: left -234px;
+}
+.icon-arrow {
+    background-position: left -234px;
+}
+.icon-date {
+  background-position: left -338px;
+}
+.icon-filter {
+  background-position: left -284px;
+}
+.icon-back {
+    background-position: left -1222px;
+}
+.icon45 {
+  width: 45px;
+  height: 45px;
+  background: url(../img/icon-45.png) no-repeat left top;
+  float: left;
+  overflow: hidden;
+  font-size: 0;
+  text-indent: -99999px;
+}
+.icon-tips {
+  float: left;
+  width: 25px;
+  height: 25px;
+  background: url('../img/icon-tips.png') no-repeat left top;
+  overflow: hidden;
+  font-size: 0;
+  text-indent: -99999px;
+}
+
+.icon-tips-warning {
+  background-position: left -50px;
+}
+
+.icon-search{
+  background-position: left -702px;
+}
+
+.icon45-warning {
+  background-position: left -135px;
+}
+
+
+.input-edit {
+    background: #ededed url("../img/icon-gray.png") no-repeat right -911px;
+    border: 1px solid #ccc;
+    height: 22px;
+    line-height: 22px;
+    width: 80px;
+    padding: 0 5px;
+    color: #999;
+  }
+  
+.input-ok {
+    background: white;
+    border: 1px solid #5895cc;
+    color: #6a7b91;
+}
+  
+.icon-quit {
+    background-position: left -624px;
+    background-image: url(../img/icon-white.png);
+}
+  
+.icon-download {
+    background-position: left -260px;
+}
+.icon-refresh{
+    background-position: left -1144px;
+}

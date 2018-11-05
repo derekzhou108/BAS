@@ -1,0 +1,67 @@
+<div class="tool-top clearfix pb20" id="searchWrap" data-date="@@dateSelect" data-filter="@@filterSelect" data-maxselect ="@@maxSelect" data-removeall="@@removeAll">
+
+    <!-- 时间选择 -->
+    <div class="date-select-wrap">
+        <script type="text/html" id="tplDate">
+            {{each data item}}
+            <div class="layui-inline">
+                <label class="date-label">{{item.title}}</label>
+                <div class="date">
+                        {{if item.id==='multi_date'}}
+                        <span  id="multi-input" class="calendar" title='{{item.date}}'></span>
+                        <span id="multi_date"></span>
+                        {{else}}
+                        <span id="{{item.id}}" class="calendar" title='{{item.date}}'></span>
+                        {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </script>
+    </div>
+    <!-- 服务器/区服 下拉筛选条件 -->
+    <div class="multi-select-wrap">
+        <script type="text/html" id="tplMulti">
+            <div class="layui-inline request-filter" data-type={{type}} data-resType={{resType}} data-maxselect={{maxSelect}}>
+                <label>{{title}}：</label>
+                <select  xm-select-search name="{{type}}" xm-select="{{type}}" xm-select-type="2" xm-select-placeholder="请选择{{title}}" {{selectRadio}}>
+                    <option value=""></option>
+                    {{each data item index}}··
+                        {{if index===0}}
+                        <option value="{{item.select_id}}" selected="selected">{{item.name}}</option>
+                        {{else}}
+                         <option value="{{item.select_id}}">{{item.name}}</option>
+                        {{/if}}
+                    {{/each}}
+                </select>
+            </div>
+        </script>
+    </div>
+    <!-- 子筛选器 -->
+    <script type="text/html" id="subFileter">
+                <div class="layui-form " lay-filter="subFileter">
+                    <div class="subFileter clearfix">
+                        {{each $data item index}}
+                            <div class="width">
+                                <label for="" class="label">{{item.label}}</label>
+                                <div class="layui-input-block">
+                                    <select name="{{item.type}}"  lay-filter="subSelect" >
+                                        {{each item.list subItem}}
+                                            <option value="{{subItem.val}}">{{subItem.name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+    </script>
+
+    <div class="layui-inline search-btn-wrap u-fl">
+        <button type="button" id="searchBtn" class="blue-btn">
+            查询
+        </button>
+    </div>
+    <div class="layui-inline filter-tips">
+        <span class="tip-btn" id="tipBtn" data-tip="@@tipName">指标说明</span>
+    </div>
+</div>

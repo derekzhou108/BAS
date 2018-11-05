@@ -1,0 +1,38 @@
+<!-- 筛选 -->
+<div class="filter-tool-wrap">
+    @@include('include/filter-wrap.html',{"dateSelect":"0,1","filterSelect":"1,4","tipName":"consume-currency"})
+</div>
+
+<!-- 图表 一 -->
+<div class="module">
+
+    <div class="module-title">
+        <h3>消耗情况</h3>
+        <a class="download-excel-btn" id="downExcel">
+            <i class="icon icon-download"></i>
+        </a>
+    </div>
+    <div class="layui-tab layui-tab-brief fold-pannel" id="tabChartTable" lay-filter="consume">
+        <div class="layui-tab-content"></div>
+        <script type="text/html" id="tplTabContentConsume">
+            <ul class="layui-tab-title">
+                {{each data item index}}
+                <li class="{{curTab? (curTab == item.money_type ? 'layui-this' : '' ) : (index === 0 ? 'layui-this' : '')}}" data-type={{item.money_type}}>{{item.money_name}}</li>
+                {{/each}}
+            </ul>
+            <div class="layui-tab-content">
+                <!-- tabContent -->
+                {{each data item index}}
+                <div class="layui-tab-item {{curTab? (curTab == item.money_type ? 'layui-show' : '' ) : (index === 0 ? 'layui-show' : '')}}">
+                    <div class="chart-contanier">
+                        <div id="subFilter-warp{{index}}"></div>
+                        <div class="chart" id="chart{{index}}"></div>
+                    </div>
+                    <table class="data-table" id="table{{index}}"></table>
+                    <!-- <div class="custom-select" id="select{{index}}"></div> -->
+                </div>
+                {{/each}}
+            </div>
+        </script>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<!-- 筛选 -->
+<div class="filter-tool-wrap">
+    @@include('include/filter-wrap.html',{"dateSelect":"3","filterSelect":"1,10","tipName":"current-report-minute","maxSelect":"1"})
+</div>
+
+<!-- 图表 一 -->
+<div class="module">
+    <div class="module-title">
+        <h3>实时综合报表（分钟）</h3>
+        <a class="download-excel-btn" id="downExcel" download="excel">
+            <i class="icon icon-download"></i>
+        </a>
+        <span class="refresh-btn">
+            <i id="addDate" class="icon icon-refresh"></i>
+        </span>
+    </div>
+    <div class="layui-tab layui-tab-brief fold-pannel  chart-in-tab" lay-filter="operationAll">
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <div class="chart-cell-wrap">
+                    <div class="chart" id="chart1"></div>
+                    <div class="chart" id="chart2"></div>
+                </div>
+                <div class="chart" id="chart3"></div>
+                <table class="data-table" id="table1"></table>
+            </div>
+        </div>
+    </div>
+</div>
