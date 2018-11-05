@@ -604,12 +604,18 @@
 
 						// 将静态字段title和type,并入接口数据中
 						multiType.forEach((k, j) => resArr[j] = Object.assign(resArr[j], filterParam[k - 1]));
-
+						console.log(resArr)
 						// 拼接模板,因返回的数据有可能出现重复，所有以selec_id为标识进行去重，并且把存在汇总的权限放在第一个选择列表中
 						resArr.forEach((item, index) => {
 
 							let isAll = false
 
+
+							// 以selec_id为标识进行去重
+
+
+
+							// 去重汇总，并且判断是否需要添加汇总
 							if (_this.exclude.indexOf(item.type) == -1) {
 								item.data.unshift({ select_id: 'all', name: "汇总" })
 							} else {
