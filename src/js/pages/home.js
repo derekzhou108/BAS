@@ -9,7 +9,7 @@
 	scope.redirect = () => {
 		// 检测有没有proId，没有则说明没有选择游戏，需跳转到index页面
 		if(!util.getStorage("proId")){
-			location.href="/sub/dist/"
+			location.href="/dist/"
 		}
 	
 		let fileName = location.hash.replace('#', ""),
@@ -76,7 +76,7 @@
 							dataTitle: item.url,
 							subModule: item.items.map(sub => {
 								return {
-									dataTitle: sub.url.replace('/sub/dist/', ""),
+									dataTitle: sub.url.replace('/dist/', ""),
 									subModuleName: sub.label,
 									// dataUrl: sub.url.includes("dist") ? "" : sub.url,
 								};
@@ -153,7 +153,7 @@
 				// 存入该项目下的游戏列表
 				util.setStorage("appList", appList);
 
-				location.href = "/sub/dist/home.html";
+				location.href = "/dist/home.html";
 			});
 		});
 	}))();

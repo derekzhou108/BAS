@@ -57,7 +57,7 @@
                 //默认选择汇总
                 util.setStorage('appId', 'all')
 
-                location.href = "/sub/dist/home.html"
+                location.href = "/dist/home.html"
             }
         })
 

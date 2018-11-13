@@ -164,7 +164,7 @@ gulp.task("server", () => {
 	const option = {
 		host: "10.10.20.176", //本地host，默认为“localhost”
 		port: 9003, //端口
-		root: "../", //根指向
+		root: "./", //根指向
 		livereload: true, //自动刷新
 		middleware(connect, opt) { //中间件配置
 			// let prefix = ['/system', '/basic', '/special'],

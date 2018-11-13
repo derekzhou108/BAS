@@ -47,14 +47,23 @@
          * @returns
          */
 		getIndex() {
-			return this.get("/system_v2/common/project-list");
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['project-list'])
+				})
+			});
 		},
 
 		/**
          * 侧边栏
          */
 		getMenu(params) { //首页,（包含项目列表和游戏列表）
-			return this.get("/system_v2/common/menu-list", params);
+			// return this.get("/system_v2/common/menu-list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['menu-list'])
+				})
+			});
 		},
 		/**
          * 游戏列表
@@ -63,13 +72,23 @@
 			return this.get("/system/app/list");
 		},
 		getMoneyList(params) { //货币列表
-			return this.get("/system/money/list", params);
+			// return this.get("/system/money/list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['money-list'])
+				})
+			});
 		},
 		getMoneyStockList(params) { //存量货币列表
 			return this.get("/system/money-stock/list", params);
 		},
 		getShopList(params) { //商城列表
-			return this.get("/system/shop/list", params);
+			// return this.get("/system/shop/list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['shop-list'])
+				})
+			});
 		},
 
 		/**
@@ -79,19 +98,39 @@
 			return this.get("/system/app/one", params);
 		},
 		filterServer(params) { //服务器列表
-			return this.get("/system/server/list", params);
+			// return this.get("/system/server/list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['server-list'])
+				})
+			});
 		},
 		filterChannel(params) { //渠道列表
-			return this.get("/system_v2/common/channel-list", params);
+			// return this.get("/system_v2/common/channel-list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['channel-list'])
+				})
+			});
 		},
 		filterAdChannel(params) { //广告渠道列表
-			return this.get("/system_v2/common/ad-channel-list", params);
+			// return this.get("/system_v2/common/ad-channel-list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['ad-channel-list'])
+				})
+			});
 		},
 		filterPropList(params) { //物品列表
 			return this.get("/system_v2/common/goods-list", params);
 		},
 		filterCampList(params) { //势力筛选
-			return this.get("/system/camp/list", params);
+			// return this.get("/system/camp/list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['camp-list'])
+				})
+			});
 		},
 		filterShopGongxianList(params) { //贡献商城代币列表
 			return this.get("/system/money/gongxian-list", params);
@@ -115,7 +154,12 @@
 			return this.get("/basic/general/general-device", params);
 		},
 		generalAccountSDK(params) { //渠道
-			return this.get("/basic/general/general-account-sdk", params);
+			// return this.get("/basic/general/general-account-sdk", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['general-account-sdk'])
+				})
+			});
 		},
 		generalDeviceSDK(params) { //运营总况（设备，平台数据）
 			return this.get("/basic_v2/general/general-device-sdk", params);
@@ -140,7 +184,12 @@
          * 实时类模块
          */
 		realTimePay(params) {//实时流水
-			return this.get("/basic_v2/real-time/cost-flow", params);
+			// return this.get("/basic_v2/real-time/cost-flow", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['cost-flow'])
+				})
+			});
 		},
 		realTimeOnLine(params) { //实时在线（账号）
 			return this.get("/basic_v2/real-time/online-flow", params);
@@ -161,7 +210,12 @@
 		},
 
 		realTimeMinuteReport(params) { //实时综合报表（分钟）
-			return this.get("/basic_v2/real-time/stat-by-minute", params);
+			// return this.get("/basic_v2/real-time/stat-by-minute", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['stat-by-minute'])
+				})
+			});
 		},
 
 		realKeyHour(params) { //每小时关键数据
@@ -177,7 +231,12 @@
          * 用户模块
          */
 		stayAccount(params) { //留存跟踪（账号）
-			return this.get("/basic/stay/stay-user", params);
+			// return this.get("/basic/stay/stay-user", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['stay-user'])
+				})
+			});
 		},
 		stayDevice(params) { //留存跟踪（设备）
 			return this.get("/basic/stay/stay-device", params);
@@ -224,9 +283,19 @@
 		},
 		goldCost(params) { //消费额度分布
 			if (params.type === "money") {
-				return this.get("/basic/gold/cost", params);
+				// return this.get("/basic/gold/cost", params);
+				return new Promise(function(resolve,reject){
+					$.get("/dist/mock/render.json").then(res => {
+						resolve(res['gold-cost'])
+					})
+				});
 			} else {
-				return this.get("/basic_v2/gold/cost-about-level", params);
+				// return this.get("/basic_v2/gold/cost-about-level", params);
+				return new Promise(function(resolve,reject){
+					$.get("/dist/mock/render.json").then(res => {
+						resolve(res['cost-about-level'])
+					})
+				});
 			}
 
 		},
@@ -234,7 +303,12 @@
          * 产出模块
          */
 		moneyProduct(params) { //货币产出情况
-			return this.get("/special/product/money-product", params);
+			// return this.get("/special/product/money-product", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['money-product'])
+				})
+			});
 		},
 		propProduct(params) { //物品产出情况
 			return this.get("/special/product/prop-product", params);
@@ -252,7 +326,12 @@
          * 商城模块
          */
 		shopSale(params) { //销售情况
-			return this.get("/special/shop/shop-sale", params);
+			// return this.get("/special/shop/shop-sale", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['shop-sale'])
+				})
+			});
 		},
 		shopDbSale(params) { //贡献商城销售情况
 			return this.get("/special/shop/daibi-shop-sale", params);
@@ -348,7 +427,12 @@
 			return this.get("/special_v2/pay/player-recharge-track", params);
 		},
 		getPayVIP(params) { //玩家VIP等级分布
-			return this.get("/special_v2/pay/vip-player-distribution", params);
+			// return this.get("/special_v2/pay/vip-player-distribution", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['vip-player-distribution'])
+				})
+			});
 		},
 		getPayFirstCharge(params) { //玩家首充等级分布
 			return this.get("/special_v2/pay/first-charge-distribution", params);
@@ -364,7 +448,12 @@
         * 字典
         */
 		getConfList(params) {
-			return this.get("/system_v2/common/conf-list", params);
+			// return this.get("/system_v2/common/conf-list", params);
+			return new Promise(function(resolve,reject){
+				$.get("/dist/mock/render.json").then(res => {
+					resolve(res['conf-list'])
+				})
+			});
 		},
 
 		updateConfList(params) {

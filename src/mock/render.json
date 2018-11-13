@@ -745,19 +745,19 @@
                 "items": [
                     {
                         "label": "运营总况（有效账号）",
-                        "url": "/sub/dist/total-account"
+                        "url": "/dist/total-account"
                     },
                     {
                         "label": "运营总况（有效设备）",
-                        "url": "/sub/dist/total-device"
+                        "url": "/dist/total-device"
                     },
                     {
                         "label": "运营总况（账号）",
-                        "url": "/sub/dist/total-account-sdk"
+                        "url": "/dist/total-account-sdk"
                     },
                     {
                         "label": "运营总况（设备）",
-                        "url": "/sub/dist/total-device-sdk"
+                        "url": "/dist/total-device-sdk"
                     }
                 ]
             },
@@ -767,19 +767,19 @@
                 "items": [
                     {
                         "label": "LTV（有效设备）",
-                        "url": "/sub/dist/ltv-device"
+                        "url": "/dist/ltv-device"
                     },
                     {
                         "label": "LTV（有效账号）",
-                        "url": "/sub/dist/ltv-account"
+                        "url": "/dist/ltv-account"
                     },
                     {
                         "label": "LTV（设备）",
-                        "url": "/sub/dist/ltv-device-sdk"
+                        "url": "/dist/ltv-device-sdk"
                     },
                     {
                         "label": "LTV（账号）",
-                        "url": "/sub/dist/ltv-account-sdk"
+                        "url": "/dist/ltv-account-sdk"
                     }
                 ]
             },
@@ -789,7 +789,7 @@
                 "items": [
                     {
                         "label": "crash情况",
-                        "url": "/sub/dist/terminal-crash"
+                        "url": "/dist/terminal-crash"
                     }
                 ]
             },
@@ -799,39 +799,39 @@
                 "items": [
                     {
                         "label": "实时流水",
-                        "url": "/sub/dist/current-stream"
+                        "url": "/dist/current-stream"
                     },
                     {
                         "label": "实时在线（账号）",
-                        "url": "/sub/dist/current-online"
+                        "url": "/dist/current-online"
                     },
                     {
                         "label": "实时注册",
-                        "url": "/sub/dist/current-register"
+                        "url": "/dist/current-register"
                     },
                     {
                         "label": "每小时新注册用户数",
-                        "url": "/sub/dist/current-new-register"
+                        "url": "/dist/current-new-register"
                     },
                     {
                         "label": "实时综合报表（小时）",
-                        "url": "/sub/dist/current-report-hour"
+                        "url": "/dist/current-report-hour"
                     },
                     {
                         "label": "实时综合报表（分钟）",
-                        "url": "/sub/dist/current-report-minute"
+                        "url": "/dist/current-report-minute"
                     },
                     {
                         "label": "每小时关键数据",
-                        "url": "/sub/dist/current-keydata-hour"
+                        "url": "/dist/current-keydata-hour"
                     },
                     {
                         "label": "实时在线（角色）",
-                        "url": "/sub/dist/current-online-role"
+                        "url": "/dist/current-online-role"
                     },
                     {
                         "label": "实时注册在线监控",
-                        "url": "/sub/dist/currrent-register-monitor"
+                        "url": "/dist/currrent-register-monitor"
                     }
                 ]
             },
@@ -841,43 +841,43 @@
                 "items": [
                     {
                         "label": "玩家留存跟踪（有效账号）",
-                        "url": "/sub/dist/stay-account"
+                        "url": "/dist/stay-account"
                     },
                     {
                         "label": "玩家留存跟踪（有效设备）",
-                        "url": "/sub/dist/stay-device"
+                        "url": "/dist/stay-device"
                     },
                     {
                         "label": "玩家留存跟踪（账号）",
-                        "url": "/sub/dist/stay-account-sdk"
+                        "url": "/dist/stay-account-sdk"
                     },
                     {
                         "label": "玩家留存跟踪（设备）",
-                        "url": "/sub/dist/stay-device-sdk"
+                        "url": "/dist/stay-device-sdk"
                     },
                     {
                         "label": "流水跟踪（日）",
-                        "url": "/sub/dist/stay-stream"
+                        "url": "/dist/stay-stream"
                     },
                     {
                         "label": "在线用户跟踪（日）",
-                        "url": "/sub/dist/stay-online"
+                        "url": "/dist/stay-online"
                     },
                     {
                         "label": "注册跟踪（日）",
-                        "url": "/sub/dist/stay-register"
+                        "url": "/dist/stay-register"
                     },
                     {
                         "label": "玩家分享行为跟踪",
-                        "url": "/sub/dist/stay-shared-track"
+                        "url": "/dist/stay-shared-track"
                     },
                     {
                         "label": "各渠道留存数据（帐号）",
-                        "url": "/sub/dist/stay-channel"
+                        "url": "/dist/stay-channel"
                     },
                     {
                         "label": "各服务器留存数据（有效帐号）",
-                        "url": "/sub/dist/stay-server"
+                        "url": "/dist/stay-server"
                     }
                 ]
             },
@@ -887,15 +887,15 @@
                 "items": [
                     {
                         "label": "分渠道账号",
-                        "url": "/sub/dist/download-user"
+                        "url": "/dist/download-user"
                     },
                     {
                         "label": "分渠道注册账号代币",
-                        "url": "/sub/dist/download-register"
+                        "url": "/dist/download-register"
                     },
                     {
                         "label": "分渠道登录账号代币",
-                        "url": "/sub/dist/download-login"
+                        "url": "/dist/download-login"
                     }
                 ]
             },
@@ -905,11 +905,11 @@
                 "items": [
                     {
                         "label": "充值额度用户数分布",
-                        "url": "/sub/dist/token-recharge"
+                        "url": "/dist/token-recharge"
                     },
                     {
                         "label": "消耗额度用户数分布",
-                        "url": "/sub/dist/token-expend"
+                        "url": "/dist/token-expend"
                     }
                 ]
             },
@@ -919,11 +919,11 @@
                 "items": [
                     {
                         "label": "物品产出情况",
-                        "url": "/sub/dist/output-goods"
+                        "url": "/dist/output-goods"
                     },
                     {
                         "label": "货币产出情况",
-                        "url": "/sub/dist/output-currency"
+                        "url": "/dist/output-currency"
                     }
                 ]
             },
@@ -933,11 +933,11 @@
                 "items": [
                     {
                         "label": "物品消耗情况",
-                        "url": "/sub/dist/consume-goods"
+                        "url": "/dist/consume-goods"
                     },
                     {
                         "label": "货币消耗情况",
-                        "url": "/sub/dist/consume-currency"
+                        "url": "/dist/consume-currency"
                     }
                 ]
             },
@@ -947,11 +947,11 @@
                 "items": [
                     {
                         "label": "商城销售情况",
-                        "url": "/sub/dist/shopping-mall"
+                        "url": "/dist/shopping-mall"
                     },
                     {
                         "label": "贡献商城销售情况（暂无数据）",
-                        "url": "/sub/dist/shopping-contribution-mall"
+                        "url": "/dist/shopping-contribution-mall"
                     }
                 ]
             },
@@ -961,11 +961,11 @@
                 "items": [
                     {
                         "label": "货币存量情况",
-                        "url": "/sub/dist/stock-condition"
+                        "url": "/dist/stock-condition"
                     },
                     {
                         "label": "贡献币存量情况（暂无数据）",
-                        "url": "/sub/dist/stock-contribution"
+                        "url": "/dist/stock-contribution"
                     }
                 ]
             },
@@ -975,7 +975,7 @@
                 "items": [
                     {
                         "label": "玩法参与情况",
-                        "url": "/sub/dist/play-mehtod-case"
+                        "url": "/dist/play-mehtod-case"
                     }
                 ]
             },
@@ -985,55 +985,55 @@
                 "items": [
                     {
                         "label": "活跃玩家等级分布情况",
-                        "url": "/sub/dist/user-active-level"
+                        "url": "/dist/user-active-level"
                     },
                     {
                         "label": "付费用户数据情况",
-                        "url": "/sub/dist/user-paid-data"
+                        "url": "/dist/user-paid-data"
                     },
                     {
                         "label": "玩家职业情况",
-                        "url": "/sub/dist/user-profession"
+                        "url": "/dist/user-profession"
                     },
                     {
                         "label": "玩家任务完成情况",
-                        "url": "/sub/dist/user-task-response"
+                        "url": "/dist/user-task-response"
                     },
                     {
                         "label": "玩家强化套等级（暂无数据）",
-                        "url": "/sub/dist/user-intensify-level"
+                        "url": "/dist/user-intensify-level"
                     },
                     {
                         "label": "玩家宝石套等级（暂无数据）",
-                        "url": "/sub/dist/user-gem-level"
+                        "url": "/dist/user-gem-level"
                     },
                     {
                         "label": "玩家进阶套等级（暂无数据）",
-                        "url": "/sub/dist/user-advance-level"
+                        "url": "/dist/user-advance-level"
                     },
                     {
                         "label": "流失玩家最后操作",
-                        "url": "/sub/dist/user-last-operation"
+                        "url": "/dist/user-last-operation"
                     },
                     {
                         "label": "玩家行为跟踪",
-                        "url": "/sub/dist/user-act-track"
+                        "url": "/dist/user-act-track"
                     },
                     {
                         "label": "玩家滚服行为分析",
-                        "url": "/sub/dist/user-act-analysis"
+                        "url": "/dist/user-act-analysis"
                     },
                     {
                         "label": "流失用户等级分布",
-                        "url": "/sub/dist/user-grade-distribution"
+                        "url": "/dist/user-grade-distribution"
                     },
                     {
                         "label": "流失用户时间分布",
-                        "url": "/sub/dist/user-time-distribution"
+                        "url": "/dist/user-time-distribution"
                     },
                     {
                         "label": "玩家实名认证跟踪",
-                        "url": "/sub/dist/user-realName-track"
+                        "url": "/dist/user-realName-track"
                     }
                 ]
             },
@@ -1043,19 +1043,19 @@
                 "items": [
                     {
                         "label": "月卡开通情况",
-                        "url": "/sub/dist/activity-month-card"
+                        "url": "/dist/activity-month-card"
                     },
                     {
                         "label": "每日礼包购买情况",
-                        "url": "/sub/dist/activity-daily-gift"
+                        "url": "/dist/activity-daily-gift"
                     },
                     {
                         "label": "冲等级礼包领取情况（暂无数据）",
-                        "url": "/sub/dist/activity-level-gift"
+                        "url": "/dist/activity-level-gift"
                     },
                     {
                         "label": "运营活动参与情况",
-                        "url": "/sub/dist/activity-join"
+                        "url": "/dist/activity-join"
                     }
                 ]
             },
@@ -1065,19 +1065,19 @@
                 "items": [
                     {
                         "label": "玩家付费行为分析",
-                        "url": "/sub/dist/pay-act-analysis"
+                        "url": "/dist/pay-act-analysis"
                     },
                     {
                         "label": "玩家充值过程跟踪",
-                        "url": "/sub/dist/pay-process-track"
+                        "url": "/dist/pay-process-track"
                     },
                     {
                         "label": "玩家VIP等级分布",
-                        "url": "/sub/dist/pay-vip"
+                        "url": "/dist/pay-vip"
                     },
                     {
                         "label": "玩家首充等级分布",
-                        "url": "/sub/dist/pay-first-charge"
+                        "url": "/dist/pay-first-charge"
                     }
                 ]
             },
